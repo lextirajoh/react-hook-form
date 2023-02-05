@@ -2,7 +2,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
-export const Form = () => {
+export default function Form() {
   const schema = yup.object().shape({
     fullName: yup.string().required('Your Full Name is Required!'),
     email: yup.string().email().required(),
@@ -41,4 +41,4 @@ export const Form = () => {
       <input type="submit" />
     </form>
   );
-};
+}
